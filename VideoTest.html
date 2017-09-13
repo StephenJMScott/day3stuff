@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        .blur{
+            -webkit-filter:blur(5px);
+        }
+        .grayscale{
+            -webkit-filter:grayscale(1);
+        }
+        .sepia{
+            -webkit-filter:sepia(1);
+        }
+        .rotate{
+            -webkit-filter:hue-rotate(270deg);
+        }
+        
+        .multi{
+            -webkit-filter: hue-rotate(180deg) grayscale(.5) opacity(.8) saturate(25) ;
+        }
+        </style>
+    </head>
+    
+    <body>
+        <h1>HTML5 Video</h1>
+        <video class="multi" controls="controls" width="600" preload="auto" muted poster="media/images/jazzcat.png">
+            <source src="media/video/MP4_Bunny.mp4" type="video/mp4"/>
+            <source src="media/video/OGV_Bunny.ogv" type="video/ogv"/>
+            <source src="media/video/WebM_Bunny.webm" type="video/webm"/>
+            <track src= "media/video/sub.vtt" label ="English Subs" kind ="subtitles" srclang="en"/>
+        </video>
+            
+    </body>
+</html>
