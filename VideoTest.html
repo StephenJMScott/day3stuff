@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+        
+        
         <style>
         .blur{
             -webkit-filter:blur(5px);
@@ -18,17 +20,65 @@
         .multi{
             -webkit-filter: hue-rotate(180deg) grayscale(.5) opacity(.8) saturate(25) ;
         }
+         #container
+			{
+				margin-right:auto; /*center container with margins left & right set to auto*/
+				margin-left:auto;
+				width:100%;	/*to center an element it must have a fixed width*/
+				border-radius: 10px;
+				padding: 10px;
+				font-size: 0; /* font-size:0 removes problem spaceing issue for inline-block*/
+				text-align:center;
+			    background-image:url("background.jpg");
+		    	background-size:contain;
+			}
+		#h1{
+		    font-size:30px;
+		    
+		}
+		
+		#h2{
+		    font-size:20px;
+		}
         </style>
     </head>
     
     <body>
-        <h1>HTML5 Video</h1>
+        
+        <div id="container">
+        
+        <h1 class id="h1">HTML5 Video</h1>
         <video class="multi" controls="controls" width="600" preload="auto" muted poster="media/images/jazzcat.png">
             <source src="media/video/MP4_Bunny.mp4" type="video/mp4"/>
             <source src="media/video/OGV_Bunny.ogv" type="video/ogv"/>
             <source src="media/video/WebM_Bunny.webm" type="video/webm"/>
             <track src= "media/video/sub.vtt" label ="English Subs" kind ="subtitles" srclang="en"/>
         </video>
+        <br>
+        <h2 class id="h2">Audio File</h2>
+        
+        <audio controls preload="auto">
+            <source src= "media/audio/tail.mp3" type="audio/mp3">
+            <source src= "media/audio/beats.ogg" type="audio/ogg">
             
+            
+            
+            "Your Browser Does Not Support This Audio"
+            
+        </audio>
+        
+        
+            
+        <audio controls preload="auto">
+            <source src= "media/audio/beats.ogg" type="audio/ogg">
+            <source src= "media/audio/tail.mp3" type="audio/mp3">
+            
+            
+            
+            
+            "Your Browser Does Not Support This Audio"
+            
+        </audio>
+        </div>
     </body>
 </html>

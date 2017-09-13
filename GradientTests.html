@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+        
+        #container{
+            margin-right:auto;
+            margin-left:auto;
+            width:100%;
+            padding:10px;
+            font-size:0;
+        }
+
+        #grad1{
+            display:inline-block;
+            font-size:20px;
+            color:red;
+            width:35%;
+            z-index:3;
+            border-style:solid;
+            border-color:black;
+            text-align:left;
+			margin-right: 5px;
+			padding:40px;
+			border-radius:10px;
+	        background: linear-gradient(to right,#000000, #FFFFFF);
+        }
+        #grad1:hover{
+            display:inline-block;
+            font-size:20px;
+            color:red;
+            z-index:3;
+            width:35%;
+            border-style:solid;
+            border-color:black;
+            text-align:left;
+			margin-right: 5px;
+			padding:40px;
+			border-radius:10px;
+	        background: linear-gradient(to right,#000000, #FFFFFF);
+	        
+	        transform:scale(1,.5) rotate(-50deg) translate(-150px,240px);
+        }
+        
+        #grad2{
+            display:inline-block;
+            font-size:20px;
+            width:35%;
+            text-align:left;
+            z-index:2;
+            border-style:dashed;
+            border-color:blue;
+			margin-right: 5px;
+			padding:40px;
+			border-radius:10px;
+			background:linear-gradient(to top left,#B912FF,#29FF1B);
+			transform:skew(50deg) translate(100px,175px);
+		    box-shadow: -100px 50px 50px #888888;
+		    text-shadow: 10px 5px 5px #E80528;
+            
+        }
+        #grad2:hover{
+            display:inline-block;
+            font-size:20px;
+            width:35%;
+            text-align:left;
+            z-index:2;
+            border-style:dashed;
+            border-color:blue;
+			margin-right: 5px;
+			padding:40px;
+			border-radius:10px;
+			background:linear-gradient(to top left,#B912FF,#29FF1B);
+			transform:scale(5,5);
+		    box-shadow: -100px 50px 50px #888888;
+		    text-shadow: 10px 5px 5px #E80528;
+            
+        }
+        #grad3{
+            display:inline-block;
+            font-size:10px;
+            width:35%;
+            color:green;
+            z-index:1;
+            
+            text-align:left;
+			margin-right: 5px;
+			padding:40px;
+			border-radius:10px;
+			background:linear-gradient(to bottom,#0E1AE8,#E80528);
+			transform: rotate(40deg) translate(-100px,150px);
+		
+			
+            
+        }
+      
+        
+        .box{
+            -ms-box-sizing: border-box;
+		        -webkit-box-sizing:border-box;
+		        -moz-box-sizing:border-box;
+		        box-sizing: border-box;
+				display:block;
+				width: 100%;
+				background-color: #81BBC9;
+				/*margin:10px;*/ /*pushing our element out of bounds*/
+				margin: 0 0 10px 0;
+				border-radius: 10px;
+				font-family: Roboto;
+				font-size: 20px;  /* important to declare font-size here, otherwise will be 0*/
+				text-align: center;
+        }
+        
+        
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div id="grad1" class="box">
+                 <p>Black To White</p>
+            </div>
+                <br>
+                
+            <div id="grad2" class="box">
+                <h2>Green to Purple Diagonal</h2>
+            </div>
+            
+            <div id="grad3" class="box">
+            
+            </div>
+            
+            
+        </div>
+        
+    </body>
+</html>
