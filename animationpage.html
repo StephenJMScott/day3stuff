@@ -17,7 +17,11 @@
     }
         }
     
-    
+    #car{
+        position:absolute;
+        top:700px;
+        display:inline-block;
+    }
     #car:hover{
         animation-name: vroom;
         animation-duration: 5s;
@@ -25,14 +29,15 @@
         animation-timing-function: ease;
         animation-fill-mode: forwards;
         position:absolute;
+        top:700px;
         display:inline-block;
     }
     #container{
         top:200px;
         width:100%;
-        padding:240px;
+        padding:500px 200px;
         height:15px;
-        background-color:;
+        background-size:cover;
         background: linear-gradient(#FF8514 80%, #000000 20%);
         
     }  
@@ -43,25 +48,26 @@
 		padding:20px;
 		z-index:100;
 		border-radius:10px;
-		background:blue;
+		bottom:0;
+		background:linear-gradient(to right, red, purple);
     }
-    
-    
+   
             
         </style>
     </head>
     <body>
         <div id="container">
             <h1>VROOOOOOOOOOOOOOOOOoooooooooooooooooooooooom!</h1>
-            <div id="road">
-                <div id="car">
+            
+            <div id="car">
                 <img src="car.png" alt="car" width="250" height="200"/>
                 
-                </div>
             </div>
         </div>
         <div id="footer">
-            
+            <button type="button">Previous</button>
+            <button type="button">Home</button>
+            <button type="button">Next</button>
         </div>
     </body>
 </html>
