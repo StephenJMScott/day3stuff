@@ -1,12 +1,13 @@
 <!DOCTYPE>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
         
         @keyframes vroom{
             0% {
-       margin-bottom:100px;
-       margin-left: 0%;
+        margin-bottom:100px;
+        margin-left: 0%;
        
     }
     
@@ -39,19 +40,46 @@
         height:15px;
         background-size:cover;
         background: linear-gradient(#FF8514 80%, #000000 20%);
+        /*background-image:url("me.jpg");*/
+        
         
     }  
 
     #footer{
-        position:fixed;
+        flex-direction:row;
+        
 		width:100%;
 		padding:20px;
 		z-index:100;
 		border-radius:10px;
-		bottom:0;
+		bottom:0px;
 		background:linear-gradient(to right, red, purple);
     }
-   
+    
+     nav ul li a{
+                    flex-direction:row;
+                    justify-content:center;
+                    text-decoration: none;
+                    font-family: roboto;
+                    color:#fff;
+                }
+                
+                nav ul{
+                    list-style:none;
+                    text-align:center;
+                }
+                
+                nav ul li{
+                    display:inline-block;
+                    font-size:30px;
+                    border-bottom:1px solid #444;
+                    padding:10px 5px;
+                    /*background-color:black;*/
+                }
+                
+   footer{
+       background:linear-gradient(to left, #9408B0, #FF0000, #E8600C);
+   }
             
         </style>
     </head>
@@ -63,11 +91,16 @@
                 <img src="car.png" alt="car" width="250" height="200"/>
                 
             </div>
-        </div>
-        <div id="footer">
-            <button type="button">Previous</button>
-            <button type="button">Home</button>
-            <button type="button">Next</button>
-        </div>
+            </div>
     </body>
+    <footer>
+        <nav>
+                <ul>
+                    <li><a href="#">Previous</li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Next</a></a></li>
+                </ul>
+        </nav>
+        
+    </footer>
 </html>

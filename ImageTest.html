@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width", initial-scale="1">
         <style>
         
         #container
@@ -61,6 +62,7 @@
         
         #owlimage{
             float:right;
+            -webkit-filter:5px;
             
         }
         
@@ -68,16 +70,67 @@
             float:left;
         }
         
+        .blur{
+            -webkit-filter:blur(5px);
+        }
+        .grayscale{
+            -webkit-filter:grayscale(1);
+        }
+        .sepia{
+            -webkit-filter:sepia(1);
+        }
+        .rotate{
+            -webkit-filter:hue-rotate(270deg);
+        }
+        
+        .multi{
+            -webkit-filter: hue-rotate(270deg) blur(2px) opacity(.5);
+        }
+        
+        .mixed{
+            -webkit-filter:hue-rotate(180deg) blur(1px) saturate(10);
+        }
+        
+        
+        @media screen and (min-width:400px){
+            
+            img{
+                border-style:solid;
+                border-radius:0;
+            }
+            
+            .multi{
+                 -webkit-filter: sepia(1);
+            }
+           
+            #owl{
+            display:inline-block;
+            font-size:10px;
+            width:35%;
+            text-align:left;
+			margin-right: 5px;
+			padding:10px;
+			background-size:contain;
+            }
+            
+            
+        }
         
         </style>
     </head>
     <body>
+        <h1>HTML5 Video</h1>
+        <video controls="controls">
+            <source src="video/MP4_Bunny.mp4/">
+            <source src="video/OGV_Bunny.ogv/">
+            <source src="video/WebM_Bunny.webm/">
+        </video>
         
         <div id="container">
             <div id="owl" class id="box">
                 <h2>OWLS</h2>
-                <img src="owl.jpg" alt="An owl looking forward" width="250" height="250" id="owlimage"/>
-                <p>Owls are birds from the order Strigiformes, which includes about 200 species of mostly solitary and nocturnal birds of prey typified 
+                <img src="owl.jpg" alt="An owl looking forward" width="250" height="250" id="owlimage" class="multi"/>
+                <p class="grayscale">Owls are birds from the order Strigiformes, which includes about 200 species of mostly solitary and nocturnal birds of prey typified 
                 by an upright stance, a large, broad head, binocular vision, binaural hearing, sharp talons, and feathers adapted for silent flight.
                 Exceptions include the diurnal northern hawk-owl and the gregarious burrowing owl.
                 Owls hunt mostly small mammals, insects, and other birds, although a few species specialize in hunting fish. They are found in all regions of the 
@@ -106,7 +159,7 @@
         
             <div id="frog" class id="box">
                 <h2>FROGS</h2>
-                <img src="frog.jpg" alt="A green frog" width="250" height="250" id="frogimage"/>
+                <img src="frog.jpg" alt="A green frog" width="250" height="250" id="frogimage" class="mixed"/>
                 <p>A frog is any member of a diverse and largely carnivorous group of short-bodied, tailless amphibians composing the order Anura
                 (Ancient Greek an-, without + oura, tail). The oldest fossil "proto-frog" appeared in the early Triassic of Madagascar,
                 but molecular clock dating suggests their origins may extend further back to the Permian, 265 million years ago. Frogs are widely distributed,
